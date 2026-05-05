@@ -31,3 +31,6 @@ It includes interactive features such as a mobile navigation menu, smooth scroll
 1. Clone the repository:https://github.com/priyanka31273/trust-it
 2. Go to project folder
 3. Open 'index.html' in your browser
+
+## Live Demo
+ https://priyanka31273.github.io/trust-it/
