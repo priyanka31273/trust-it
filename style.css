@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #0aedf5;
+    background:  linear-gradient(90deg,rgba(10, 237, 245, 1) 0%,
+     rgba(25, 6, 128, 1) 50%, rgba(10, 237, 245, 1) 100%);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background:  url('images/hero.png') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background:  #4a90e2;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Services */
+.services {
+    padding: 50px;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    border: 2px solid #a7a7fc;
+    padding: 20px;
+    flex: 1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.card:hover {
+    transform: translateY(-20px);
+
+}
+
+.card i{
+     font-size :40px ;
+     margin-bottom: 20px;
+     color: blue;
+}
+/* About */
+.about {
+    padding: 60px 10%;
+}
+
+.about-title {
+    text-align: center;   /* heading উপরে থাকবে */
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.about-container {
+    display: flex;        /* side by side করবে */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;     
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start;     
+    padding: 20px;
+}
+.button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #024ca0;
+    color: wheat;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.social {
+    margin-top: 20px;   
+    display: flex;
+    gap: 15px;
+    font-size: 40px;
+    transform: 0.5s;
+}
+
+/* optional styling */
+.social a {
+    text-decoration: none;
+    color: #180470;
+    display: inline-block;
+    transition: 0.3s;
+}
+.social a:hover {
+    transform: translateY(-5px);
+
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Contact */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: #f5f7fb;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+    border-color: #4a90e2;
+}
+
+.contact-card button {
+    width: 100%;
+    padding: 12px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-card button:hover {
+    background: #357ab8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+}
